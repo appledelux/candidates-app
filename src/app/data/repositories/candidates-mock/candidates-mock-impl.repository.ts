@@ -1,0 +1,19 @@
+import { Observable, of } from 'rxjs';
+import { CandidateDTO } from 'src/app/core/entities/candidate.interface';
+import { CandidateRepository } from 'src/app/core/repositories/candidates/candidates.repository';
+import data from 'src/assets/mocks/candidates_mock.json';
+
+export class CandidatesMockImplRepository extends CandidateRepository {
+  constructor() {
+    super();
+  }
+
+  override getCandidates(): Observable<CandidateDTO[]> {
+    console.log('>> Get Candidates: ', data);
+    return of(data);
+  }
+  override createCandidate(candidate: CandidateDTO): Observable<void> {
+    console.log('Creation Candidate', candidate);
+    return of();
+  }
+}

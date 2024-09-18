@@ -1,0 +1,82 @@
+[
+  {
+    "uuid": "1",
+    "name": "Name 1",
+    "surname": "Surname 1",
+    "seniority": "junior",
+    "years": "1",
+    "availability": "true"
+  },
+  {
+    "uuid": "2",
+    "name": "Name 2",
+    "surname": "Surname 2",
+    "seniority": "senior",
+    "years": "8",
+    "availability": "false"
+  },
+  {
+    "uuid": "3",
+    "name": "Name 3",
+    "surname": "Surname 3",
+    "seniority": "senior",
+    "years": "11",
+    "availability": "true"
+  },
+  {
+    "uuid": "4",
+    "name": "Name 4",
+    "surname": "Surname 4",
+    "seniority": "junior",
+    "years": "3",
+    "availability": "false"
+  },
+  {
+    "uuid": "5",
+    "name": "Name 5",
+    "surname": "Surname 5",
+    "seniority": "senior",
+    "years": "13",
+    "availability": "false"
+  },
+  {
+    "uuid": "6",
+    "name": "Name 6",
+    "surname": "Surname 6",
+    "seniority": "junior",
+    "years": "3",
+    "availability": "true"
+  },
+  {
+    "uuid": "7",
+    "name": "Name 7",
+    "surname": "Surname 7",
+    "seniority": "junior",
+    "years": "3",
+    "availability": "true"
+  },
+  {
+    "uuid": "8",
+    "name": "Name 8",
+    "surname": "Surname 8",
+    "seniority": "junior",
+    "years": "4",
+    "availability": "false"
+  },
+  {
+    "uuid": "9",
+    "name": "Name 9",
+    "surname": "Surname 9",
+    "seniority": "junior",
+    "years": "1",
+    "availability": "false"
+  },
+  {
+    "uuid": "10",
+    "name": "Name 10",
+    "surname": "Surname 10",
+    "seniority": "junior",
+    "years": "0",
+    "availability": "false"
+  }
+]

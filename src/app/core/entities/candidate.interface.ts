@@ -1,4 +1,5 @@
 export interface CandidateDTO {
+  uuid: string;
   name: string;
   surname: string;
   seniority: string;
@@ -6,10 +7,16 @@ export interface CandidateDTO {
   availability: string;
 }
 
+export enum Seniority {
+  junior = 'Junior',
+  senior = 'Senior',
+}
+
 export interface ICandidate {
+  id: string;
   name: string;
   surname: string;
-  seniority: string;
-  years: number;
+  seniority: Seniority;
+  yearsExperience: number;
   availability: boolean;
 }

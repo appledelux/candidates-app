@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
-import { ICandidate } from '../../entities/candidate.interface';
+import { CandidateDTO } from '../../entities/candidate.interface';
 
 export abstract class CandidateRepository {
-  abstract getCandidates(): Observable<ICandidate[]>;
-  abstract createCandidate(candidate: ICandidate): Observable<void>;
+  abstract getCandidates(): Observable<CandidateDTO[]>;
+  abstract createCandidate(candidate: CandidateDTO): Observable<void>;
 }
