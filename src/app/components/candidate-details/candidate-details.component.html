@@ -1,34 +1,30 @@
-<div>
-  <form [formGroup]="candidateFG">
-    <mat-form-field>
-      <mat-label>Name</mat-label>
-      <input matInput formControlName="name">
-    </mat-form-field>
+<form class="cd-form" [formGroup]="candidateFG">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Surname</mat-label>
-      <input matInput formControlName="surname">
-    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Surname</mat-label>
+    <input matInput formControlName="surname">
+  </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Seniority</mat-label>
-      <mat-select formControlName="seniority">
-        <mat-option *ngFor="let item of options" [value]="item">
-          {{item}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Seniority</mat-label>
+    <mat-select formControlName="seniority">
+      <mat-option *ngFor="let item of options" [value]="item">
+        {{item}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Years of experience</mat-label>
-      <input matInput formControlName="yearsExperience">
-    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Years of experience</mat-label>
+    <input matInput formControlName="yearsExperience">
+  </mat-form-field>
 
-    <!-- <mat-form-field>
-      <mat-slide-toggle formControlName="availability" color="primary">
-        Availability
-      </mat-slide-toggle>
-    </mat-form-field> -->
+  <mat-slide-toggle formControlName="availability" color="primary" readonly>
+    Availability
+  </mat-slide-toggle>
 
-  </form>
-</div>
+</form>

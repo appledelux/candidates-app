@@ -1,3 +1,10 @@
 :root {
   --color--primary-100: #bde7e2;
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #e9e9eb;
+  --color-border: #8b8b92;
+  --font-size-200: 1rem;
+  --color-text-default: #000000;
+  --font-weight-normal: 400;
+  --color-text-muted: #66666c;
 }

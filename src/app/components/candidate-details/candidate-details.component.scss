@@ -1,0 +1,12 @@
+.cd-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  .mat-mdc-form-field {
+  }
+
+  .mat-mdc-form-field-label {
+    color: var(--color-text-muted);
+  }
+}
