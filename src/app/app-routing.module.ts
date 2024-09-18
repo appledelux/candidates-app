@@ -1,24 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CandidatesPageComponent } from './pages/candidates-page/candidates-page.component';
 
 const routes: Routes = [
   {
     path: 'candidates',
-    children: [
-      {
-        path: '',
-        redirectTo: 'candidates',
-        pathMatch: 'full',
-      },
-      // {
-      //   path: 'create',
-      //   component: null
-      // },
-      // {
-      //   path: 'viewer',
-      //   component: null
-      // },
-    ],
+    component: CandidatesPageComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'candidates',
+    pathMatch: 'full',
   },
 ];
 

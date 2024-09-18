@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CandidatesPageComponent } from './pages/candidates-page/candidates-page.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,6 +14,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     NoopAnimationsModule,
     MatCardModule,
+    CandidatesPageComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

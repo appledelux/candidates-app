@@ -1,0 +1,33 @@
+<div>
+  <form [formGroup]="candidateFG">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Surname</mat-label>
+      <input matInput formControlName="surname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Seniority</mat-label>
+      <mat-select formControlName="seniority">
+        <mat-option *ngFor="let item of options" [value]="item">
+          {{item.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-slide-toggle formControlName="availability" color="primary">
+        Availability
+      </mat-slide-toggle>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>Years of experience</mat-label>
+      <input matInput formControlName="experienceYears">
+    </mat-form-field>
+  </form>
+</div>

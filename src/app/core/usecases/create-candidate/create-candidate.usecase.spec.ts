@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { CandidateRepository } from '../../repositories/candidates/candidates.repository';
-import { CreateCandidateUseCase } from './create-candidates.usecase';
+import { CreateCandidateUseCase } from './create-candidate.usecase';
 
 describe('CreateCandidateUseCase', () => {
   let useCase: CreateCandidateUseCase;
