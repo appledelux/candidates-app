@@ -1,3 +1,11 @@
 <div>
-  <app-candidates-table></app-candidates-table>
+  <ng-container *ngIf="(candidates$ | async) as candidates; else noData">
+    <app-candidates-table [dataset]="candidates" (actionClick)="showCandidateDetails($event)"></app-candidates-table>
+  </ng-container>
 </div>
+
+<ng-template #noData>
+  <span>
+    There was a problem loading the candidates data
+  </span>
+</ng-template>
