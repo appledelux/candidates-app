@@ -24,7 +24,7 @@ export class CandidateMapper implements Mapper<CandidateDTO, ICandidate> {
       surname,
       yearsExperience: Number(years),
       seniority: Seniority[seniority as keyof typeof Seniority],
-      availability: Boolean(availability),
+      availability: /true/.test(availability.toLowerCase()),
     };
   }
 
