@@ -1,0 +1,7 @@
+.element-row {
+  &:hover,
+  &:focus {
+    background: var(--color--primary-100);
+    cursor: pointer;
+  }
+}

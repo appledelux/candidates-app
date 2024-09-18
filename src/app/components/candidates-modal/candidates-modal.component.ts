@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
+import { Component, inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { CandidateDetailsComponent } from '../candidate-details/candidate-details.component';
 
 @Component({
@@ -9,4 +9,7 @@ import { CandidateDetailsComponent } from '../candidate-details/candidate-detail
   templateUrl: './candidates-modal.component.html',
   styleUrls: ['./candidates-modal.component.scss'],
 })
-export class CandidatesModalComponent {}
+export class CandidatesModalComponent {
+  matDialogData = inject(MAT_DIALOG_DATA);
+  data = this.matDialogData.candidate;
+}

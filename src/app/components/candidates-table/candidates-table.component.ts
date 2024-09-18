@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { ICandidate } from 'src/app/core/entities/candidate.interface';
 
@@ -12,8 +12,24 @@ import { ICandidate } from 'src/app/core/entities/candidate.interface';
 })
 export class CandidatesTableComponent {
   @Input() dataset: ICandidate[] = [];
-  readonly rowClickedId = null;
-  displayedSelectedColumns = [
+  @Output() actionClick = new EventEmitter<ICandidate>();
+
+  // Sort
+  // @ViewChild(MatSort) set matSort(matSort: MatSort) {
+  //   if (ms) {
+  //     this.sort = matSort;
+  //     this.setDataSourceAttributes();
+  //   }
+  // }
+
+  // Paginator
+  // @ViewChild(MatSort) set matPaginator(matPaginator: MatPaginator) {
+  //   if (ms) {
+  //     this.paginator = matPaginator;
+  //     this.setDataSourceAttributes();
+  //   }
+  // }
+  displayedColumns = [
     'name',
     'surname',
     'seniority',
@@ -21,9 +37,7 @@ export class CandidatesTableComponent {
     'availability',
   ];
 
-  constructor() {}
-
   showCandidate(candidate: ICandidate) {
-    console.log('Opened Details', candidate);
+    this.actionClick.emit(candidate);
   }
 }
