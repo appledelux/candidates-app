@@ -7,10 +7,11 @@ import { CandidateRepository } from 'src/app/core/repositories/candidates/candid
 export class CandidatesImplRepository extends CandidateRepository {
   url = '/api/candidates-api';
 
-  override getCandidates(): Observable<CandidateDTO[]> {
-    throw new Error('Method not implemented.');
+  constructor() {
+    super();
   }
-  override createCandidate(candidateDTO: CandidateDTO): Observable<void> {
+
+  override getCandidates(): Observable<CandidateDTO[]> {
     throw new Error('Method not implemented.');
   }
 }

@@ -16,18 +16,15 @@ export class CandidatesFacadeService {
   }
 
   showDetailsDialog(candidate: ICandidate) {
-    const dialogRef = this.dialog.open<CandidatesModalComponent>(
-      CandidatesModalComponent,
-      {
-        minHeight: '270px',
-        minWidth: '700px',
-        data: {
-          candidate,
-        },
-        autoFocus: false,
-      }
-    );
+    const dialogRef = this.dialog.open(CandidatesModalComponent, {
+      minHeight: '270px',
+      minWidth: '700px',
+      data: {
+        candidate,
+      },
+      autoFocus: false,
+    });
 
-    return dialogRef.afterClosed() as Observable<void>;
+    return dialogRef.afterClosed();
   }
 }

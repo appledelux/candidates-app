@@ -31,19 +31,4 @@ describe('CandidatesImplRepository', () => {
       });
     });
   });
-
-  describe('#createCandidate', () => {
-    it('should return OK', (done) => {
-      // Preps
-      const [candidate] = data;
-      // Evaluation
-      candidatesMockImplRepository
-        .createCandidate(candidate)
-        .subscribe((data) => {
-          // Expect
-          expect(data).toEqual();
-          done();
-        });
-    });
-  });
 });

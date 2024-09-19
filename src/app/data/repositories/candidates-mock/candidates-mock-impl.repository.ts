@@ -14,8 +14,4 @@ export class CandidatesMockImplRepository extends CandidateRepository {
     console.log('>> Get Candidates: ', data);
     return of(data);
   }
-  override createCandidate(candidate: CandidateDTO): Observable<void> {
-    console.log('Creation Candidate', candidate);
-    return of();
-  }
 }

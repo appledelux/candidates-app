@@ -28,21 +28,7 @@ export class CandidateMapper implements Mapper<CandidateDTO, ICandidate> {
     };
   }
 
-  mapTo({
-    id,
-    name,
-    surname,
-    yearsExperience,
-    seniority,
-    availability,
-  }: ICandidate): CandidateDTO {
-    return {
-      uuid: id,
-      name,
-      surname,
-      years: yearsExperience.toString(),
-      seniority,
-      availability: String(availability),
-    };
+  mapTo(param: ICandidate): CandidateDTO {
+    throw new Error('Method not implemented.');
   }
 }
