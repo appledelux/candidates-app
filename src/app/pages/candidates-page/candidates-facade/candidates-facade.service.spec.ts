@@ -43,6 +43,14 @@ describe('CandidatesFacadeService', () => {
   let matDialog: jasmine.SpyObj<MatDialog>;
   let matDialogRef: jasmine.SpyObj<MatDialogRef<CandidatesModalComponent>>;
 
+  beforeAll(() => {
+    jasmine.clock().install();
+  });
+
+  afterAll(() => {
+    jasmine.clock().uninstall();
+  });
+
   beforeEach(() => {
     const matDialogSpy = jasmine.createSpyObj('MatDialog', [
       'open',
@@ -72,6 +80,9 @@ describe('CandidatesFacadeService', () => {
       ],
     });
     service = TestBed.inject(CandidatesFacadeService);
+    matDialogRef = TestBed.inject(MatDialogRef) as jasmine.SpyObj<
+      MatDialogRef<CandidatesModalComponent>
+    >;
     getCandidatesUseCase = TestBed.inject(
       GetCandidatesUseCase
     ) as jasmine.SpyObj<GetCandidatesUseCase>;
@@ -82,13 +93,7 @@ describe('CandidatesFacadeService', () => {
   });
 
   describe('#showDetailsDialog', () => {
-    beforeEach(() => {
-      matDialogRef = TestBed.inject(MatDialogRef) as jasmine.SpyObj<
-        MatDialogRef<CandidatesModalComponent>
-      >;
-    });
-
-    it('should open the candidatesModalComponent', (done) => {
+    it('should open the candidatesModalComponent', () => {
       const candidate = {
         id: '4',
         name: 'Name 4',
