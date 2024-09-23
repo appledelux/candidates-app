@@ -27,6 +27,11 @@ import { CandidatesFacadeService } from './candidates-facade/candidates-facade.s
       provide: CandidateRepository,
       useClass: CandidatesMockImplRepository,
     },
+    // API
+    // {
+    //   provide: CandidateRepository,
+    //   useClass: CandidatesImplRepository,
+    // },
   ],
   templateUrl: './candidates-page.component.html',
   styleUrls: ['./candidates-page.component.scss'],

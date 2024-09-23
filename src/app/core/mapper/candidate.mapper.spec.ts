@@ -20,12 +20,12 @@ describe('CandidateMappers', () => {
   describe('#mapFrom', () => {
     it('should return an object of the type ICandidate', () => {
       const candidate_mock = {
-        uuid: '1',
+        _id: '1',
         name: 'Name 1',
         surname: 'Surname 1',
         seniority: 'junior',
         years: '1',
-        availability: 'true',
+        availability: true,
       };
       const candidate = {
         id: '1',

@@ -8,23 +8,11 @@ import {
 import { EMPTY, of } from 'rxjs';
 import { CandidatesModalComponent } from 'src/app/components/candidates-modal/candidates-modal.component';
 import {
-  CandidateDTO,
   ICandidate,
   Seniority,
 } from 'src/app/core/entities/candidate.interface';
 import { GetCandidatesUseCase } from 'src/app/core/usecases/get-candidates/get-candidates.usecase';
 import { CandidatesFacadeService } from './candidates-facade.service';
-
-const CANDIDATES_MOCK: CandidateDTO[] = [
-  {
-    uuid: '1',
-    name: 'Name 1',
-    surname: 'Surname 1',
-    seniority: 'junior',
-    years: '1',
-    availability: 'true',
-  },
-];
 
 const CANDIDATES_MAPPED_MOCK: ICandidate[] = [
   {

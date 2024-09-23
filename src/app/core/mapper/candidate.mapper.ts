@@ -11,7 +11,7 @@ import {
 })
 export class CandidateMapper implements Mapper<CandidateDTO, ICandidate> {
   mapFrom({
-    uuid,
+    _id,
     name,
     surname,
     years,
@@ -19,12 +19,12 @@ export class CandidateMapper implements Mapper<CandidateDTO, ICandidate> {
     availability,
   }: CandidateDTO): ICandidate {
     return {
-      id: uuid,
+      id: _id,
       name,
       surname,
       yearsExperience: Number(years),
       seniority: Seniority[seniority as keyof typeof Seniority],
-      availability: /true/.test(availability.toLowerCase()),
+      availability,
     };
   }
 

@@ -11,12 +11,12 @@ import { GetCandidatesUseCase } from './get-candidates.usecase';
 
 const CANDIDATES_MOCK: CandidateDTO[] = [
   {
-    uuid: '1',
+    _id: '1',
     name: 'Name 1',
     surname: 'Surname 1',
     seniority: 'junior',
     years: '1',
-    availability: 'true',
+    availability: true,
   },
 ];
 

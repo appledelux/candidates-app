@@ -1,10 +1,10 @@
 export interface CandidateDTO {
-  uuid: string;
+  _id: string;
   name: string;
   surname: string;
   seniority: string;
   years: string;
-  availability: string;
+  availability: boolean;
 }
 
 export enum Seniority {

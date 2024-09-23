@@ -26,3 +26,13 @@ td.mat-mdc-cell {
     cursor: pointer;
   }
 }
+
+.icon {
+  &-check {
+    color: #008000;
+  }
+
+  &-close {
+    color: #ff0000;
+  }
+}

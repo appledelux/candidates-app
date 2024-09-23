@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 import { ICandidate } from 'src/app/core/entities/candidate.interface';
+import { IconDirective } from 'src/app/directives/icon.directive';
 
 @Component({
   standalone: true,
   selector: 'app-candidates-table',
-  imports: [CommonModule, MatTableModule],
+  imports: [CommonModule, MatTableModule, MatIconModule, IconDirective],
   templateUrl: './candidates-table.component.html',
   styleUrls: ['./candidates-table.component.scss'],
 })
